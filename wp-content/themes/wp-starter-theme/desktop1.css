@@ -1,0 +1,118 @@
+/*=========================================================
+***********************************************************
+
+	Iphone Template
+
+***********************************************************
+=========================================================*/
+
+@media only screen and (min-width: 30em){
+	/*html {
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}
+	html.peace-out {
+		transform: translate(0,-900px);
+		-webkit-transform: translate(0,-900px);
+	}*/
+
+	.layout-1 body {
+		background-color: #dadada;
+		background-image: url("img/iphone.png");
+		background-repeat: no-repeat;
+		background-position-x: center;
+		background-position-y: 50px;
+		transform: scale(0.9);
+		-webkit-transform: scale(0.9);
+	}
+
+	.layout-1 .wrap {
+		position: absolute;
+		margin: 0px auto;
+		right: 0;
+		left: 0;
+		width: 375px;
+		height: 596px;
+		overflow-y: scroll;
+		padding-top: 45px;
+		top: 189px;
+		background-color: white;
+	}
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	.layout-1 h1.home-title {
+		margin-left: 10%;
+	}
+
+	.layout-1 .layout-1 h1#home-issue_number {
+		right: 0;
+		left: 0;
+		top: 189px;
+		z-index: 0;
+	}
+
+	.layout-1 .layout-1 nav {
+		width: 375px;
+		text-align: right;
+		height: 45px;
+		top: 189px;
+	}
+
+	.layout-1 .layout-1 header {
+		width: 375px;
+		position: absolute;
+	}
+
+	.layout-1 .page-content {
+		position: relative;
+		z-index: 1;
+		margin: 0;
+		background:-webkit-linear-gradient(top, rgba(255,255,255,0) 0px, rgba(255,255,255,0) 410px, rgba(255,255,255,1) 301px, rgba(255,255,255,1) 100%);
+	}
+	.layout-1 .page-content:before {
+		content: '';
+		display: block;height: 330px;
+	}
+
+	.layout-1 label.menu-toggle {
+		position: relative;
+		top: 0.5em;
+		margin: 0;
+	}
+
+	.layout-1 nav > ul {
+		height: 581px;
+		overflow-y: scroll;
+		text-align: left; 
+		position: absolute;
+		top: 0;
+		padding: 30px 0;
+	}
+
+	.layout-1 nav ul > li > a:link,
+	.layout-1 nav ul > li > a:visited,
+	.layout-1 .older > a:link,
+	.layout-1 .older > a:visited {
+		padding: 0.4em;
+	}
+
+	.layout-1 #post-wrap {
+		margin-top: 0;
+	}
+
+	.layout-1 a.iphone-home {
+		display: block;
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		position: fixed;
+		top: 850px;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+}

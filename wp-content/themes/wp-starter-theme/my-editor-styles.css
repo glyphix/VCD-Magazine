@@ -1,0 +1,17 @@
+.question,
+.answer,
+.initials {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.8em;
+}
+
+.question {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.initials{
+	font-size: 1.2em;
+	color: #888;
+	font-weight: 600;
+}

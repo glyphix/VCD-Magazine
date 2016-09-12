@@ -1,0 +1,83 @@
+
+
+/*=========================================================
+***********************************************************
+
+	NORMAL DESKTOP STYLES
+
+***********************************************************
+=========================================================*/
+
+.no-phone body {
+	font-size: 1.1em;
+	line-height: 1.5;
+}
+
+.no-phone #post-wrap,
+.no-phone section,
+.no-phone .single #post-wrap,
+.no-phone header,
+.no-phone h1#home-issue_number {
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.no-phone .page-content{
+	margin-top: 6em;
+}
+
+
+.no-phone a.featured-img {
+	height: 610px;
+	overflow: hidden;
+}
+.no-phone .featured-img > img {
+	width: 100%;
+}
+
+.no-phone h1.home-title {
+	margin: 0;
+	position: relative;
+	top: 100px;
+}
+
+.no-phone .type-wrap,
+.no-phone .letter h3.post-type {
+	margin: 0;
+	padding: 0;
+}
+
+.no-phone #post-wrap {
+	margin: 8vh auto 0 auto;
+	padding: 0 0 8vh 0;
+}
+
+.no-phone .category-featured .type-wrap {
+	margin-top: -4em;
+}
+
+.no-phone .category-featured .type-wrap > a {
+	display: block;
+}
+
+.no-phone #points {
+	overflow: hidden;
+}
+
+.no-phone #points #post-wrap {
+	margin: 5em 3em 8vh 0; 
+	width: 300px;
+}
+
+.no-phone #points h3.post-type {
+	margin-top: 2em;
+}
+
+.no-phone .single #main-content {
+	width: 100%;
+}
+
+
+
+

@@ -1,0 +1,1447 @@
+/*
+
+Theme Name: VCD Mag
+Theme URI: http://www.kent.edu
+Description: "Custom theme for the VCD Magazine"
+Version: 1.0.0
+Author: Nate Druss
+Tags: Digital Publication, Magazine, Issues & Articles
+
+*//*/*//*/*//*/*//*/*//*/*//*/*//*/*//*/*/
+
+
+/*=========================================================
+
+	UNIVERSAL
+
+=========================================================*/
+
+body {
+	font-family: 'Work Sans', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background-color: white;
+}
+
+.clearfix {
+	overflow: auto;
+	clear: both;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+	padding: 0;
+}
+
+a:link,
+a:hover,
+a:visited,
+a:active {
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+}
+
+b {
+	font-weight: 800;
+}
+
+.page-content {
+	box-sizing: border-box;
+	margin: 20em 0 0 0;
+	padding: 0 2%;
+	position: relative;
+	z-index: 1;
+}
+
+ul.layout-switch {
+		display: none;
+}
+
+/*quotes*/
+
+blockquote > p:before {
+	content: '\201C';
+	position: absolute;
+	left: -0.33em;
+}
+
+blockquote > p:after{
+	content: '\201D';
+}
+
+iframe {
+	width: 100%;
+}
+
+button{
+	color: inherit;
+}
+
+
+/*=========================================================
+***********************************************************
+
+	NAV
+
+**********************************************************
+=========================================================*/
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	z-index: 10;
+	padding: 6px 0 7px 0;
+	text-align: right;
+	background-color: rgba(255,255,255,0.5);
+}
+
+nav .home-link {
+	position: absolute;
+	left: 2%;
+	top: 0.3em;
+	padding: 0.4em;
+	font-size: 1.1em;
+	font-weight: 600;
+	text-transform: uppercase;
+	background-color: white;
+}
+
+nav a:active {
+	background-color: inherit;
+}
+
+label.menu-toggle {
+	display: inline-block;
+	cursor: pointer;
+	font-size: 1em;
+	margin: 0 2% 0 0 !important;
+	padding: 0.5em;
+}
+
+.open {
+	background-color: white;
+	color: silver;
+}
+
+.open:before {
+	content: "Menu";
+}
+
+.close {
+	color: white;
+}
+
+.close:before {
+	content: "Close";
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+nav > ul {
+	width: 100%;
+	text-align: left;
+	height: 88vh;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	padding: 8vh 0 4vh 0;
+	margin: 0;
+	background-color: rgba(255, 255, 255, 0.72);
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+
+nav > ul:after {
+	content: "";
+	display: block;
+	height: 26vh;
+}
+
+nav > ul.main-nav{
+	height: 100vh !important;
+}
+
+nav ul > li {
+	list-style: none;
+	width: 96%;
+	border-bottom: 1px solid;
+	padding: 2vh 0;
+	margin: 0 auto;
+}
+
+nav ul > li > a:link,
+nav ul > li > a:visited{
+	color: rgba(0,0,0,0.4);
+}
+
+
+nav ul > li > a:link,
+nav ul > li > a:visited,
+.older > a {
+	box-sizing: border-box;
+	display: block;
+	font-size: 2em;
+	font-weight: 500;
+	padding: 1em 2vh 2.5vh 2%;
+	cursor: pointer;
+}
+
+nav ul > li > a:hover{
+	color: inherit;
+	transition: 0.25s linear;
+}
+
+
+.older > a:before {
+	display: inline-block;
+	content: '';
+	width: 0; 
+	height: 0; 
+	border-top: 0.3em solid transparent;
+	border-bottom: 0.3em solid transparent;
+	border-left: 0.4em solid;
+	margin: 0 0.2em 0.08em 0;
+	transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transition: all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+	cursor: pointer;
+}
+
+.selected > a:before {
+	cursor: pointer;
+	color: inherit;
+	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+
+.back-issue > ul {
+	padding-left: 1.2em;
+}
+
+.back-issue > ul > li > a:before {
+	color: inherit;
+	content: "Issue ";
+}
+
+a.iphone-home {
+	display: none;
+}
+
+/*======================================================================
+************************************************************************
+^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v
+
+
+
+	HOME
+
+
+
+^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^
+************************************************************************
+======================================================================*/
+
+/******************** HEADER ********************/
+h1.home-title {
+	font-size: 2em;
+	font-weight: 500;
+	line-height: 1em;
+	padding: 0;
+	position: absolute;
+	top: 3.5em;
+	left: 10vw;
+}
+
+h1.home-title span{
+	font-size: 0.6em;
+	color: gray;
+}
+
+h1#home-issue_number {
+	font-size: 25em;
+	font-weight: 500;
+	line-height: 1em;
+	margin: 0;
+	margin-top: -0.05em;
+	padding: 0;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	top: 0px;
+	z-index: -1000;
+}
+
+
+/******************** POSTS ********************/
+.mini-wrap{
+	background-color: white;
+	border-top: 1px solid gray;
+	position: relative;
+	top: -2em;
+	padding-bottom: 3em;
+
+}
+
+#post-wrap {
+	padding-top: 1em;
+	border-bottom: 1px solid gray;
+}
+
+a.featured-img {
+	display: block;
+	min-height: 2em;
+}
+
+.featured-img > img {
+	max-width: 100%;
+	width: 100%;
+}
+
+.type-wrap {
+	width: 100%;
+	position: relative;
+	top: -2em;
+}
+
+#featured-content > .type-wrap{
+	background: rgba(255,255,255,0); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%); /* Standard syntax */
+
+}
+
+h2.title {
+	color: white;
+	margin: -0.65em 0 0 0 !important;
+	width: 88%;	
+	font-size: 2.5em;
+	font-weight: 700;
+	line-height: 1.15em;
+}
+
+h2.title span {
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	padding: 0 0.2em;
+}
+
+.post-body {
+	background-color: white;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+.post-body p {
+	box-sizing: border-box;
+	line-height: 1.5em;
+	font-weight: 300;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0 10% 0 0;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.post-body p > a:link,
+.post-body p > a:visited{
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+.letter .post-body p.read-more {
+	margin-top: 1em;
+}
+
+.post-body p > a.more-link:link,
+.post-body p > a.more-link:visited,
+a.more-link:link,
+a.more-link:visited,
+#points .post-body p > a:link,
+#points .post-body p > a:visited {
+	display: inline-block;
+	text-decoration: none;
+	font-size: 0.8em;
+	font-weight: 600;
+	margin: 0 0 0 0 ;
+	padding: 0.1em;
+	text-transform: uppercase;
+	line-height: 1.2em;
+	color: inherit;
+}
+
+
+
+section:last-child #post-wrap:not(.category-featured):last-child{
+	border-bottom: none;
+}
+
+/******************** FEATURED ARTICLE ********************/
+#featured-content .category-featured {
+	display: block;
+}
+
+#featured-content {
+	width: 100%;
+}
+
+#featured-content > #post-wrap {
+	width: 100%;
+	border: none;
+}
+
+#featured-content .post-body{
+	padding-top: 8em;
+	margin-top: -8em;
+	position: relative;
+	z-index: -1;
+	padding-bottom: 2em;
+}
+
+
+section.front-matter-wrap{
+	width: 96%;
+	margin: 10vh 2%;
+	box-sizing: border-box;
+	border: none;
+}
+
+/******************** LETTER TO THE DIRECTOR ********************/
+
+#letter #post-wrap {
+	padding-bottom: 1em;
+	margin-top: 3em !important;
+	border-bottom: none !important;
+}
+.letter .post-body {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	overflow: hidden;
+	position: relative;
+}
+
+.letter .type-wrap {
+	top: 0;
+}
+
+.letter .post-body p {
+	font-weight: 400;	
+	margin: 0;
+	padding: 1em;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.letter .post-body > p:first-of-type:first-letter {
+	/*font-size: 3.5em;*/
+	background-color: none !important;
+	color: inherit !important;
+}
+
+.letter .post-body:before {
+	content:'';
+	background: rgba(255,255,255,0); /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(top, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 90%); /* Standard syntax */
+	height: 100%;
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+#letter .post-body{
+	position: relative;
+	text-align: center;
+
+}
+
+.letter a.more-link {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.letter h3.post-type,
+#points h3.post-type,
+#glyphix h3.post-type {
+	font-size: 2em;
+	line-height: 1em;
+	margin-left: 2%;
+	text-align: center;
+	width: 100%;
+	top: 0.7em;
+}
+
+.letter > .post-wrap > .type-wrap > a.more-link,
+#points > .post-wrap > .type-wrap > a.more-link,
+{
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+#letter > #post-wrap:last-child {
+	margin-bottom: 0;
+}
+
+/******************** POINTS OF PRIDE ********************/
+#points,
+#glyphix {
+	position: relative;
+	margin-top: 3em !important;
+
+}
+
+#points > .slider{
+	border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+.slider {
+	list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;   
+	overflow-x: scroll;
+	overflow-y: hidden;
+	margin-top: -1px;
+	-webkit-overflow-scrolling: touch;
+}
+
+ol.slider {
+    counter-reset: li;   
+}
+
+/*Ordered List Marker*/
+ol.slider > li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 0.2em 1em 0.2em 0.85em;
+    font-weight: 700;
+}
+
+#points h3.post-type {
+	width: auto;
+	text-align: center;
+}
+
+.slider #post-wrap {
+	vertical-align: top;
+    display: inline-block;
+    position: relative;
+    white-space: normal;
+}
+
+#points #post-wrap {
+	margin: 1.5em 2vw 4em;
+	padding: 2.5em 1vw 2.5em 7vw;
+	border-style: solid;
+	border-width: 1px;
+	width: 66vw;
+	max-width: 255px;
+	height: 360px;
+	max-height: 55vh;
+}
+
+#points .type-wrap {
+	margin: 0;
+	top: 0
+}
+
+#points .post-body {
+	margin: 0;
+	text-align: center;
+}
+
+#points .post-body > p {
+	color: gray;
+	font-size: 0.8em;
+	font-weight: normal;
+	position: relative;
+	padding: 0;
+}
+
+#points .post-body p:last-child > a:link,
+#points .post-body p:last-child > a:visited {
+	position: relative;
+	display: table;
+	margin: 1em auto 0 auto;
+}
+
+#points h4.title {
+	font-size: 1.2em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#points h5.subtitle {
+	font-size: 1em;
+	font-weight: 500;
+	padding: 0;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+
+/*For issues without Points of Pride*/
+
+#points > ol:empty {
+}
+
+/******************** Glyphix ********************/
+
+#glyphix {
+	width: 100%;
+	padding-bottom: 3em;
+	margin-top: 0em;
+	position: relative;
+	border-bottom: none !important;
+}
+
+#glyphix > h3.post-type{
+	margin: 0.7em 0;
+}
+
+#glyphix > .slider #post-wrap {
+	border-bottom: none !important;
+	width: 80%;
+	margin: 0% 0 0 2%;
+}
+
+#glyphix > .slider #post-wrap:first-child {
+	margin: 0 0 0 10%;
+}
+
+#glyphix > .slider #post-wrap:last-child {
+	margin: 0 10% 0 2%;
+}
+
+
+#glyphix > #post-wrap .slide{
+}
+
+
+section.#glyphix > ul#slides{
+	border-bottom: none !important;
+	width: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+section.#glyphix > ul#slides > li#post-wrap .slide{ 
+	margin: 0;
+	padding: 0;
+	border-bottom: none !important;
+}
+
+
+section.#glyphix > ul#slides > li#post-wrap:last-child {
+	margin: 0;
+	padding: 0;
+}
+
+#glyphix .contain {
+	border-bottom: none !important;
+
+}
+
+.full-frame {
+	border-bottom: none !important;
+	margin: 0;
+	padding:0;
+	width:100%;
+	
+}
+
+.full-frame img {
+	border-bottom: none !important;
+	width: 100%;
+}
+
+
+
+
+
+#glyphix .post-body {
+	margin: 0;
+	background: inherit;
+	background-color: #fff;
+	position: relative;
+	z-index: 1;
+}
+
+#glyphix .post-body p {
+	margin: 0;
+}
+
+#glyphix blockquote {
+	width: 80%;
+	height: 80%;
+	padding: 6vw 5vw 6vw 7vw;
+	border: solid 1vw;
+	margin: 0;
+	position: relative;
+}
+
+#glyphix blockquote > p {
+	
+	padding: 0;
+	font-size: 1.3em;
+	font-weight: 500;
+	word-wrap: break-word;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+  	transform: translateY(-50%);
+  	text-align: center;
+}
+#glyphix blockquote > p:before {
+	position: relative;
+	left: 0;
+}
+
+#glyphix blockquote > p:after {
+	left: 0.1em;
+	position: relative;
+}
+
+
+#glyphix .wp-caption {
+	width: auto !important;
+	background: inherit;
+	position: static;
+	left: 0;
+	padding: 0;
+}
+
+#glyphix video {
+	width: 100%;
+	display: block;
+}
+
+#glyphix iframe {
+	max-width: 76vw;
+}
+
+#glyphix .post-body img {
+	max-width: none;
+	margin: 0;
+	width: 100%;
+}
+
+#glyphix .post-body p.wp-caption-text {
+	margin: 0;
+	width: 100%!important;
+	padding: 0.5em!important;
+	background-color: rgba(0,0,0,0.05)!important;
+	color: gray !important;
+}
+
+
+
+/*======================================================================
+************************************************************************
+^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v
+
+
+
+	SINGLE POSTS
+	
+
+
+^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^v^
+************************************************************************
+======================================================================*/
+
+.single > h1 {
+	text-align: center;
+	font-size: 25em;
+	font-weight: 600;
+	margin-top: -50px;
+}
+
+.single h2.title {
+	position: relative;
+	line-height: 1.15em;
+}
+
+.single .subtitle {
+	font-size: 1.1em;
+	text-transform: uppercase;
+}
+
+.single .lead-in {
+	margin-top: 2em;
+	font-size: 1.2em;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	font-weight: 300;
+}
+
+.credits {
+	margin: 1em 0;
+	padding: 0 0 0.5em 0;
+	list-style-type: none;
+	font-size: 1em;
+	border-bottom: solid 6px;
+	color: #999;
+	line-height: 1.4;
+	padding-bottom: 1em;
+}
+
+.credits li:before {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.credits .author:before {
+	content: 'Words: ';
+}
+
+.credits .images:before {
+	content: 'Images: ';
+}
+
+.single .category-featured h2.title {
+	font-size: 4em;
+}
+
+.single .category-featured .type-wrap {
+	top: -4em;
+}
+
+.single .page-content {
+	background: none;
+	overflow: visible;
+	margin: 0;
+	padding-bottom: 4vh;
+}
+
+.single #post-wrap {
+	margin: 0;
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.single .post-body {
+	padding: 1em 0 0 0;
+	background-color: inherit;
+	margin: 0;
+}
+
+.single .post-body p {
+	font-weight: 400;
+	padding-bottom: 1.4em;
+	margin: 0 2%;
+	width: 96%;
+	padding-right: 0;
+	color: #333;
+}
+
+.single .letter h3.post-type {
+	text-align: left;
+}
+
+.single .letter .post-body p {
+	padding-right: 0;
+	padding-left: 0;
+	text-align: left;
+}
+
+.single .letter {
+	margin-top: -2em;
+}
+
+.single .letter #post-wrap {
+	margin-bottom: 1.5em;
+}
+
+.single .post-body > p:last-child {
+	margin-bottom: 0;
+	padding-bottom: 2.5em;
+}
+
+.single .post-body blockquote {
+	margin: 0.5em 2% 1em 2%;
+	font-size: 2.6em;
+	position: relative;
+	border-bottom: solid 16px;
+	border-top: solid 16px;
+}
+
+.single .post-body blockquote > p{
+	padding: 1em 0 1em 0.2em;
+	font-weight: 300;
+}
+
+.single .post-body blockquote > p:before{
+	left: 0;
+}
+
+.single .ender { 
+	margin: 0;
+	background-color: #fff;
+	padding: 1em 0.5em;
+	position: relative;
+}
+
+.single .ender > p {
+	line-height: 2.875em;
+	font-weight: 400;
+	border: solid 0.15em;
+	padding: 15vh 3em;
+	font-size: 1.75em;
+	text-align: left;
+	margin-bottom: 4em;
+}
+
+.single .ender > p:before {
+	left: 0;
+	position: static;
+}
+
+.single blockquote p:empty{
+	display: none;
+}
+
+/********************** Images **********************/
+
+.wp-caption {
+	width: 100% !important;
+	background-color: #fff;
+	position: relative;
+	padding: 1.4em 0;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+.post-body .aligncenter img {
+	margin: 0 auto;
+}
+
+.post-body img {
+	max-width: 96%;
+	height: auto;
+	margin: 0 2%;
+}
+
+.post-body p.wp-caption-text{
+	border-top: solid 1px;
+	padding: 0.25em 0;
+	margin: 0.5em 2%;
+	width: 96%;
+	text-align: left;
+}
+
+.p:empty,
+span:empty {
+	display: none;
+}
+
+.type-story > .single-post .post-body > p:first-of-type:first-letter {
+	float:left;
+	font-size: 8em;
+	line-height: 0.9em;
+	margin: 0em 0.1em -0.1em 0;
+	padding: 0.2em;
+}
+
+.single .interview .question {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.initials{
+	font-size: 2.5em;
+	font-weight: 300;
+	position: relative;
+	top: 0.35em;
+}
+
+.answer {
+	margin-bottom: 1em; 
+	display: block;
+}
+
+
+/******************** LETTER TO THE DIRECTOR ********************/
+.single .letter .post-type {
+	font-size: 2.5em;
+	margin-bottom: .2em;
+	margin-top: 0;
+	font-weight: 700;
+	text-transform: none;
+}
+
+.single .letter .post-body {
+	max-height: none;
+}
+
+.single .letter .post-body:before {
+	content:none;
+	display: none;
+}
+
+.next-post {
+	width: 96%;
+	text-align: center;
+	margin: 0 2%;
+}
+
+.next-post a {
+	display: inline-block;
+	color: inherit;
+	font-size: 2em;
+	font-weight: 600;
+	margin-bottom: 3.5em;
+}
+
+/*=========================================================
+***********************************************************
+
+	FOOTER
+
+***********************************************************
+=========================================================*/
+
+footer {
+	text-align: center;
+	overflow: hidden;
+	color: white;
+	padding: 0 2%;
+	margin-top:-2em;
+	padding:0;
+	display: block;
+	position: relative;
+	width: 100%;
+}
+
+.widget-area {
+	padding: 30vh 0 ;
+}
+
+.es_textbox {
+	padding-bottom: 1em;
+}
+
+.es_caption{
+	display: none;
+}
+
+.es_msg{
+	color: white;
+}
+
+input.es_textbox_class {
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 300;
+	background-color: inherit;
+	height: 2em;
+	width: 90%;
+	border: 1px solid white;
+	text-indent: 0.7em;
+	border-radius: 0.2em;
+	box-sizing: border-box;
+	-webkit-appearance: inherit;
+}
+
+input.es_textbox_button {
+	height: 4em;
+	background-color: white;
+	border: none;
+	font-weight: 600;
+	width: 90%;
+	border-radius: 0.2em;
+	margin-top: 2em;
+}
+
+h3.keep-in-touch{
+	font-size: 3em;
+	font-weight: 400;
+	margin:0 0 10vh 0;
+}
+
+.es_lablebox {
+	font-weight: 400;
+	padding: 0em 0 0.5em 0;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	text-align: left;
+	width: 90%;
+	margin: 0 5%;
+}
+
+.widget_search {
+	padding-top: 2em;
+	margin-top: 20vh;
+	display: none;
+}
+
+.widget_search > form {
+	padding: 0.4em 0;
+	border-bottom: solid 2px #fff;
+	width: 90%;
+	margin:0 auto;
+}
+
+.widget_search > form:after {
+	display: table;
+	content: "";
+	clear: both;
+}
+
+.widget_search > form > input.search-input {
+	border: none;	
+	color: #fff;
+	background-color: inherit;
+	display: block;
+	float: left;
+	width: 206px;
+}
+
+.widget_search > form > button.search-submit {
+	float: right;
+	display: block;
+	-webkit-appearance: inherit;
+	border: none;
+	background-color: #fff;
+	height: 3em;
+	width: 3em;
+	border-radius: 0.2em;
+}
+
+.widget_search > form > button.search-submit:before {
+	content: "\1F50E";
+}
+
+input::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 1;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0;
+	outline: none;
+}
+
+#rock-bottom {
+	background-color: #252525;
+	font-size: 0.9em;
+	padding: 2em 0;
+	color: #707070;
+	position: relative;
+}
+
+#rock-bottom > .widget_text,
+.copyright {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.ksu-logo {
+	background-image: url("img/ksu-logo.png");
+	background-size: 100%;
+	background-position: center;
+	height: 4em;
+	background-repeat: no-repeat;
+	padding: 1em 0;
+}
+
+
+#rock-bottom .widget_text {
+	padding-bottom: 1em;
+}
+
+#rock-bottom .widget_text > h3 {
+	padding-bottom: 0.3em;	
+	font-weight: 700;
+	color: #C8C8C8;
+}
+
+#rock-bottom .textwidget > p{
+	margin: 0.5em 0;
+}
+
+#rock-bottom .textwidget > p:first-line{
+	font-weight: 600;
+}
+
+.copyright {
+	padding: 1em 0 1.5em 0;
+}
+
+.single .copyright {
+	padding: 1em 0 3em 0;
+	margin: auto;
+}
+
+#rock-bottom > .secondary-sidebar footer{
+	position: relative;
+	display: block;
+	padding: 0;
+	margin: 0;
+
+}
+
+
+
+
+/*=========================================================
+***********************************************************
+
+	Medium/Large Screen Styles
+
+***********************************************************
+=========================================================*/
+
+@media only screen and (min-width: 30em){
+
+	article,
+	.wrap,
+	.page-content {
+		transition: width 0.5s;
+		-webkit-transition: width 0.5s;
+	}
+/*
+	.wrap{
+				box-shadow: 0px 0px 4px rgba(0,0,0,0.3);
+	}
+*/
+	section.front-matter-wrap{
+		width: 90%;
+		margin: 10vh 5%;
+		box-sizing: border-box;
+		border: 1px solid gray;
+	}
+
+	.type-wrap{
+		/*top: -2.5em;*/
+	}
+
+	.home .post-body {
+		font-size: 1.2em;
+	}
+
+	.post-body {
+		margin-right: 1%;
+		margin-left: 1%;
+		font-size: 1.1em;
+	}
+
+	#points h3.post-type {
+		margin: 0;
+	}
+
+	#points #post-wrap {
+		padding: 2.5em 6% 2.5em 6%;
+		margin: 1.5em 4% 4em 2%;
+	}
+
+	#points > .slider{
+		border-right: none;
+	}
+
+	#post-wrap {
+		margin-top: 3em;
+	}
+
+	#letter #post-wrap {
+		margin-top: 1.5em;
+	}
+
+	#glyphix > .slider #post-wrap {
+		border-bottom: none !important;
+		width: 80%;
+		margin: 0 2%;
+	}
+
+	#glyphix > .slider #post-wrap:first-child {
+		margin: 0 2% 0 10%;
+	}
+
+	#glyphix > .slider #post-wrap:last-child {
+		margin-right: 10% !important;
+	}
+
+	.wrap {
+		margin: 0px auto;
+		right: 0;
+		left: 0;
+		width: 33em;
+		background-color: white;
+	}
+
+	h1.home-title {
+		margin-left: 10%;
+		left: 0;
+	}
+
+	h1#home-issue_number {
+		width: 33rem;
+		top: 140px;
+		z-index: 0;
+	}
+
+	h2.title {
+		font-size: 3.5em;
+	}
+
+	nav {
+		width: 33em;
+		text-align: right;
+		height: 45px;
+		padding: 0 0 7px 0;
+	}
+
+	header {
+		width: 33em;
+		position: relative;
+		height: 0;
+	}
+
+	.page-content {
+		position: relative;
+		overflow-x: hidden;
+		z-index: 1;
+		margin: 0;
+		padding: 0;
+	}
+	.page-content:before {
+		content: '';
+		display: block;
+		height: 330px;
+	}
+
+	label.menu-toggle {
+		position: relative;
+		top: 0.5em;
+		margin: 0;
+	}
+
+	nav > ul {
+		height: 581px;
+		overflow-y: scroll;
+		text-align: left; 
+		position: absolute;
+		top: 0;
+		padding: 30px 0;
+	}
+
+	nav ul > li > a:link,
+	nav ul > li > a:visited,
+	.older > a:link,
+	.older > a:visited {
+		padding: 0.4em;
+	}
+
+	a.iphone-home {
+		display: block;
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		position: fixed;
+		top: 850px;
+		right: 0;
+		left: 0;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	#glyphix {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	#glyphix #post-wrap{
+	border-bottom: none !important;
+	}
+
+	#glyphix #post-wrap:last-child {
+		margin-right: 2.2em;
+	}
+
+	#glyphix .contain {
+		width:100%;
+	}
+
+	#glyphix img {
+		max-width: 100%;
+		width: 100%;
+		height: auto;
+	}
+
+	.full-frame img {
+		width: 100%;
+	}
+
+	#glyphix blockquote {
+		border-width: 6px;
+		width: 90%;
+		height: 90%;
+		padding: 3%;
+	}
+
+	#glyphix blockquote > p {
+		font-size: 1em;
+		width: 80%;
+		margin-left: 6%;
+	}
+
+	footer {
+		height: auto;
+		padding: 14em 2% 20em 2%;
+		box-sizing: border-box;
+	}
+
+	.widget-area {
+		padding: 0;
+	}
+
+	.single .page-content:before {
+		display: none;
+	}
+
+	#rock-bottom {
+		padding: 4em 0 1em 0;
+	}
+
+	.ksu-logo {
+		background-size: 88%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

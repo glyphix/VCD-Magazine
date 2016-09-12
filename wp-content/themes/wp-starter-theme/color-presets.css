@@ -1,0 +1,245 @@
+
+
+/******************** COLORS PRESETS ********************/
+
+
+
+/*Theme A*/
+
+#theme-a .color-1,
+#theme-a .letter .post-body > p:first-of-type:first-letter,
+#theme-a .post-body p > a:link,
+#theme-a .post-body p > a:visited,
+#theme-a #glyphix blockquote,
+#theme-a input.es_textbox_button {
+	color: #00d1dd;
+}
+
+#theme-a .background-color-1,
+#theme-a #points ol > li:before,
+#theme-a .type-story > .single-post .post-body > p:first-of-type:first-letter {
+	background-color: #00d1dd;
+}
+
+#theme-a .border-color-1,
+#theme-a.single .post-body blockquote {
+	border-color: #00d1dd;
+}
+
+#theme-a .color-2,
+#theme-a .type-story > .single-post .post-body > p:first-of-type:first-letter {
+	color:#fff900;
+}
+
+#theme-a .background-color-2,
+#theme-a .more-link,
+#theme-a #points .post-body p:last-child > a:link,
+#theme-a #points .post-body p:last-child > a:visited {
+	background-color: #fff900;
+}
+
+#theme-a .color-3,
+#theme-a .post-body p.wp-caption-text,
+#theme-a.single .category-featured .post-body p,
+#theme-a.single .post-body blockquote > p,
+#theme-a #points .post-body p:last-child > a:link,
+#theme-a #points .post-body p:last-child > a:visited {
+	color:#2b5956;
+}
+
+
+#theme-a .background-color-3 {
+	background-color: #2b5956;
+}
+
+#theme-a .border-color-3,
+.wp-caption-text{
+	border-color: #2b5956;
+}
+
+#theme-a .older > a:before {
+	border-left-color: #2b5956;
+}
+
+
+/* Gradients (color-1 >> color-2) */
+
+#theme-a .gradient_bg {
+	background: #00d1dd; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-45deg, #00d1dd, #fff900); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(-45deg, #00d1dd, #fff900); /* Standard syntax */
+}
+
+#theme-a .gradient,
+#theme-a .standard > img{
+	background: #00d1dd; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00d1dd, #fff900); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(#00d1dd, #fff900); /* Standard syntax */
+}
+
+#theme-a .half-gradient {
+	background: #95E85B; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(135deg, #95E85B, #00d1dd); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(135deg, #95E85B, #00d1dd); /* Standard syntax */
+}
+
+#theme-a footer,
+#theme-a .half-gradient-linear {
+	background: #00d1dd; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00d1dd, #95E85B); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(#00d1dd, #95E85B); /* Standard syntax */
+}
+
+
+/* 
+================================================================== 
+		Theme B 
+==================================================================
+*/
+
+#theme-b .color-1,
+#theme-b .letter .post-body > p:first-of-type:first-letter {
+	color: #0018dd;
+}
+
+#theme-b .background-color-1,
+#theme-b #points ol > li:before {
+	background-color: #0018dd;
+}
+
+#theme-b .color-2 {
+	color:#00ff5e;
+}
+
+#theme-b .background-color-2,
+#theme-b .more-link,
+#theme-b .letter .post-body > p:first-of-type:first-letter {
+	background-color: #00ff5e;
+}
+
+#theme-b .color-3 {
+	color:#444444;
+}
+
+#theme-b .background-color-3 {
+	background-color: #444444;
+}
+
+
+/* Gradients (color-1 >> color-2) */
+#theme-b .gradient_bg {
+	background: #0018dd; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-45deg, #0018dd, #00ff5e); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(-45deg, #0018dd, #00ff5e); /* Standard syntax */
+}
+
+#theme-b footer,
+#theme-b .half-gradient  {
+	background: #0018dd; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#0018dd, #00ff5e); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(#0018dd, #00ff5e); /* Standard syntax */
+}
+
+
+/*Theme C*/
+#theme-c .color-1,
+#theme-c .letter .post-body > p:first-of-type:first-letter {
+	color: #F300FF;
+}
+
+#theme-c .background-color-1,
+#theme-c #points ol > li:before {
+	background-color: #F300FF;
+}
+
+#theme-c .color-2 {
+	color:#FFA800;
+}
+
+#theme-c .background-color-2,
+#theme-c .more-link,
+#theme-c .letter .post-body > p:first-of-type:first-letter {
+	background-color: #FFA800;
+}
+
+#theme-c .color-3 {
+	color:#444444;
+}
+
+#theme-c .background-color-3 {
+	background-color: #444444;
+}
+
+/* Gradients (color-1 >> color-2) */
+#theme-c .gradient_bg {
+	background: #F300FF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-45deg, #F300FF, #FFA800); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(-45deg, #F300FF, #FFA800); /* Standard syntax */
+}
+
+#theme-c footer,
+#theme-c .half-gradient  {
+	background: #F300FF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#F300FF, #FFA800); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(#F300FF, #FFA800); /* Standard syntax */
+}
+
+
+/*Theme D*/
+#theme-d .color-1,
+#theme-d .letter .post-body > p:first-of-type:first-letter {
+	color: #171717;
+}
+
+#theme-d .background-color-1,
+#theme-d #points ol > li:before {
+	background-color: #171717;
+}
+
+#theme-d .color-2 {
+	color:#9a9a9a;
+}
+
+#theme-d .background-color-2,
+#theme-d .more-link,
+#theme-d .letter .post-body > p:first-of-type:first-letter {
+	background-color: #9a9a9a;
+}
+
+#theme-d .color-3 {
+	color:#000000;
+}
+
+#theme-d .background-color-3 {
+	background-color: #000000;
+}
+
+/* Gradients (color-1 >> color-2) */
+
+#theme-d .gradient_bg {
+	background: #171717; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-45deg, #171717, #9a9a9a); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(-45deg, #171717, #9a9a9a); /* Standard syntax */
+}
+
+#theme-d footer,
+#theme-d .half-gradient {
+	background: #171717; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#171717, #9a9a9a); /* For Safari 5.1 to 6.0 */
+    background: linear-gradient(#171717, #9a9a9a); /* Standard syntax */
+}
+
+
+
+
+
+
+
+p.wp-caption-text{
+	margin: 0 auto;
+	padding: 0.5em!important;
+	background-color: rgba(0,0,0,0.05)!important;
+	color: gray !important;
+	box-sizing: border-box !important;
+	font-size: 0.8em;
+}
