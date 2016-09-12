@@ -68,8 +68,8 @@ function html5blank_header_scripts()
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0');
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
         
-        wp_register_script('slidescript', get_template_directory_uri() . '/js/jquery.slides.min.js.js', array('jquery'), '1.0.0');
-        wp_enqueue_script('slidescript'); // Enqueue it!
+       wp_register_script('swiper', get_template_directory_uri() . '/js/swiper.min.js', array(), '1.0.0');
+        wp_enqueue_script('swiper'); // Enqueue it!
     }
 }
 
@@ -96,6 +96,9 @@ function html5blank_styles()
 
     wp_register_style('color', get_template_directory_uri() . '/color-presets.css', array(), '1.0', 'all');
     wp_enqueue_style('color'); // Enqueue it!
+
+    wp_register_style('swiper', get_template_directory_uri() . '/swiper.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('swiper'); // Enqueue it!
 }
 
 // Register HTML5 Blank Navigation

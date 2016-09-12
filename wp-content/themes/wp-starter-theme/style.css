@@ -1169,7 +1169,6 @@ input:focus::-webkit-input-placeholder {
 		overflow: visible;
 		z-index: 1;
 		margin: 0 auto;
-		padding: 0;
 	}
 	.page-content:before {
 		content: '';
@@ -1186,6 +1185,20 @@ input:focus::-webkit-input-placeholder {
 		width: 33em;
 		position: relative;
 		height: 0;
+	}
+
+	h1.home-title {
+		margin-left: 10%;
+		left: 0;
+		font-size: 3em;
+		top: 130px;
+	}
+
+	h1#home-issue_number {
+		max-width: 40rem;
+		font-size: 28em;
+		top: 40px;
+		z-index: 0;
 	}
 
 	nav {	
@@ -1231,6 +1244,8 @@ input:focus::-webkit-input-placeholder {
 		font-size: 1.1em;
 	}
 
+	#points {padding-right: 1px;	}
+
 	#points h3.post-type {margin: 0}
 
 	#points #post-wrap {
@@ -1240,33 +1255,7 @@ input:focus::-webkit-input-placeholder {
 	}
 
 	.swiper-arrow {
-		background-image: url("img/swiper-arrow.svg");
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: center;
-		height: 40px;
-		width: 20px;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		cursor: pointer;
-		opacity: .6;
-		transition: opacity .2s;
-		-webkit-transition: opacity .2s;
-		-moz-transition: opacity .2s;
-	}
-
-	.swiper-arrow:hover {
-		opacity: 1;
-	}
-
-	.next-button {
-		right: -60px;
-	}
-
-	.prev-button {
-		left: -60px;
-		transform: translateY(-50%)rotate(180deg);
+		display: none;
 	}
 
 	#post-wrap {margin-top: 3em}
@@ -1274,16 +1263,7 @@ input:focus::-webkit-input-placeholder {
 	#letter #post-wrap {margin-top: 1.5em}
 
 
-	h1.home-title {
-		margin-left: 10%;
-		left: 0;
-	}
-
-	h1#home-issue_number {
-		width: 33rem;
-		top: 140px;
-		z-index: 0;
-	}
+	
 
 	h2.title {font-size: 3.5em}
 
@@ -1338,6 +1318,41 @@ input:focus::-webkit-input-placeholder {
 	#rock-bottom {padding: 4em 0 1em 0}
 
 	.ksu-logo {background-size: 88%}
+
+}
+
+@media only screen and (min-width: 44em) {
+
+	.swiper-arrow {
+		display: block;
+		background-image: url("img/swiper-arrow.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 40px;
+		width: 20px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		opacity: .6;
+		transition: opacity .2s;
+		-webkit-transition: opacity .2s;
+		-moz-transition: opacity .2s;
+	}
+
+	.swiper-arrow:hover {
+		opacity: 1;
+	}
+
+	.next-button {
+		right: -60px;
+	}
+
+	.prev-button {
+		left: -60px;
+		transform: translateY(-50%)rotate(180deg);
+	}
 
 }
 
