@@ -203,14 +203,15 @@
 				);
 			$story = new WP_Query( $args );
 			if ( $story->have_posts() ) : ?>
-				<section id="story">
+				<section id="interview">
 					<?php while ( $story->have_posts() ) : $story->the_post(); ?>
 					<article id="post-wrap" <?php post_class(); ?>>
 						<a class="featured-img standard" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(full); ?></a>
-						<div class="type-wrap">
-							<a href="<?php the_permalink(); ?>">
+						<a href="<?php the_permalink(); ?>">
 								<h2 class="title"><span class="post-title background-color-1"><?php the_title(); ?></span></h2>
 							</a>
+						<div class="type-wrap">
+							
 							<div class="post-body color-3">
 								<p><?php the_field("lead_in"); ?></p>
 								<a class="more-link" href="<?php the_permalink(); ?>"><?php the_field("read_more_link") ?></a>
@@ -268,7 +269,7 @@
 			<?php endif; ?>
 			<?php wp_reset_postdata(); ?>
 
-			<!-- Interview -->
+			<!-- Story -->
 			<?php
 			$args = array(
 				'post_type' => array( 'story'),
@@ -285,10 +286,11 @@
 					<?php while ( $story->have_posts() ) : $story->the_post(); ?>
 					<article id="post-wrap" <?php post_class(); ?>>
 						<a class="featured-img standard" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(full); ?></a>
-						<div class="type-wrap">
-							<a href="<?php the_permalink(); ?>">
+						<a href="<?php the_permalink(); ?>">
 								<h2 class="title"><span class="post-title background-color-1"><?php the_title(); ?></span></h2>
 							</a>
+						<div class="type-wrap">
+							
 							<div class="post-body color-3">
 								<p><?php the_field("lead_in"); ?></p>
 								<a class="more-link" href="<?php the_permalink(); ?>"><?php the_field("read_more_link") ?></a>

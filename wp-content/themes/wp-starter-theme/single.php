@@ -47,29 +47,28 @@
 
 				<!-- post thumbnail -->
 				<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<div class="featured-img">
+				<div class="post_featured-img featured-img">
 					<?php the_post_thumbnail(full); ?>
 				</div>
 				<?php endif; ?>
 
-				<div class="type-wrap">
-					<!-- post title -->
-					<h2 class="title">
-						<span class="post-title background-color-1"><?php the_title(); ?></span>
-					</h2>
+				<!-- post title -->
+				<h2 class="title">
+					<span class="post-title background-color-1"><?php the_title(); ?></span>
+				</h2>
 
+				<section class="post-intro">
 					<p class="lead-in color-3"><?php the_field("lead_in"); ?></p>
-
 					<ul class="credits border-color-3">
 						<li class="author"><?php the_field("words"); ?></li>
 						<?php if ( get_field("images") ) : ?>
 							<li class="images"><?php the_field("images"); ?></li>
 						<?php endif; ?>
 					</ul>
+				</section>
 
-					<!-- post content -->
-					<div class="post-body"><?php the_content(); ?></div>
-				</div>
+				<!-- post content -->
+				<div class="post-body"><?php the_content(); ?></div>
 
 				<?php if ( get_field("end_quote") ) : ?>
 					<!-- end quote -->
